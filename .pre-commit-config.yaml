@@ -3,7 +3,7 @@ repos:
     hooks:
     -   id: wily
         name: wily
-        entry: wily build generator/ test/
+        entry: wily build generator/ 
         verbose: true
         language: python
         additional_dependencies: [wily]
