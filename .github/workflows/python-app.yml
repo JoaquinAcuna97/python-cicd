@@ -38,4 +38,8 @@ jobs:
       run: |
         wily build generator/ test/
         wily diff generator/ -r HEAD^1
-        
+        wily graph generator/generator.py loc complexity
+        wily index --message
+        wily report generator/generator.py --message
+        wily rank
+
