@@ -36,5 +36,5 @@ jobs:
         pytest
     - name: Run wily code complexity
       run: |
-        wily build test/
+        wily build generator/ test/ -n 1
 
