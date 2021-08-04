@@ -1,7 +1,6 @@
 
 import unittest
-
-import generator
+from generator import generator
 
 def test_sample_single_word():
     l = ('test', 'a', 'word')
