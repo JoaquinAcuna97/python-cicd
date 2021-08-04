@@ -36,5 +36,6 @@ jobs:
         pytest
     - name: Run wily code complexity
       run: |
+        git checkout -b branch_for_wily 
         wily build generator/ test/ -n 1
 
