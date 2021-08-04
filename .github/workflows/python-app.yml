@@ -36,7 +36,6 @@ jobs:
         pytest
     - name: Run wily code complexity
       run: |
-        git status
         wily build generator/ test/
         wily diff generator/ -r HEAD^1
         wily diff generator/ -r HEAD^1
