@@ -36,8 +36,7 @@ jobs:
         pytest
     - name: Run code complexity
       run: |
-        radon cc generator/generator.py -a -nc
-        wily build generator/ -n 1 -o maintainability
+        prospector
         
 
 
