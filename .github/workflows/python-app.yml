@@ -36,9 +36,5 @@ jobs:
         pytest
     - name: Run wily code complexity
       run: |
-        pre-commit install
-        pre-commit run --all-files
-        wily graph generator/generator.py loc complexity
-        wily index --message
-        wily report generator/generator.py --message
+        wily build test/
 
