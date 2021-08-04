@@ -36,11 +36,7 @@ jobs:
         pytest
     - name: Run wily code complexity
       run: |
-        git init
-        wily build generator/ test/
-        wily diff generator/ -r HEAD^1
-        wily graph generator/generator.py loc complexity
-        wily index --message
-        wily report generator/generator.py --message
+        pre-commit install
+        pre-commit run --all-files
         wily rank
 
