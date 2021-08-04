@@ -36,7 +36,7 @@ jobs:
         pytest
     - name: Run wily code complexity
       run: |
-        git checkout -b branch_for_wily  # avoid wily error: "HEAD is a detached symbolic reference"
+        git status
         wily build generator/ test/
         wily diff generator/ -r HEAD^1
         wily diff generator/ -r HEAD^1
