@@ -36,6 +36,5 @@ jobs:
         pytest
     - name: Run code complexity
       run: |
-        pip install radon
         radon cc generator/generator.py -a -nc
 
