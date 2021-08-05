@@ -64,15 +64,18 @@ connectors = (
     "Against"
 )
 
-def sample(l, n = 1):
-    result = random.sample(l, n)
+
+def sample(the_sample= None, n = 1):
+    result = random.sample(the_sample, n)
     if n == 1:
         return result[0]
     return result
 
+
 def generate_movie():
     phrase = ' '.join([sample(character), sample(connectors), sample(final_phrase)])
     return phrase.title()
+
 
 if __name__ == "__main__":
     print(generate_movie())
