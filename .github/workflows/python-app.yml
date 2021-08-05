@@ -56,8 +56,9 @@ jobs:
           python -m pip install wily
       - name: Check code quality changes with wily
         run: |
-          wily build src/
-          wily diff src/ -r master
+          wily build generator/
+          wily diff generator/ -r master
+          wily report generator/generator.py
         
 
 
