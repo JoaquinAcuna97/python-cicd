@@ -54,11 +54,19 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install wily
-      - name: Check code quality changes with wily
+      - name: Build wily
         run: |
-          wily build generator/
+          wily build generator/ test/
           wily diff generator/ -r master
+      - name: Show wily report
+        run: |
           wily report generator/generator.py
+          wily report test/test_generator.py
+      - name: Show wily rank
+        run: |
+          wily rank generator
+
+      
         
 
 
