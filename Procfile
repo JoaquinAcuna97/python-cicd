@@ -1,1 +1,1 @@
-web: gunicorn wsgi:python-cicd
+web: gunicorn wsgi
