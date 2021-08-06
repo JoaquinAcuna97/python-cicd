@@ -56,7 +56,7 @@ jobs:
           python -m pip install wily
       - name: Build wily
         run: |
-          wily build generator/ test/
+          wily build generator/ test/ .
           wily diff generator/ -r master
       - name: Show wily report
         run: |
@@ -64,7 +64,9 @@ jobs:
           wily report test/test_generator.py
       - name: Show wily rank
         run: |
-          wily rank generator/ test/
+          wily rank generator/ 
+          wily rank test/ 
+          wily rank .
 
       
         
