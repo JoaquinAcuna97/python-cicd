@@ -1,7 +1,12 @@
-FROM alpine:3.5
-RUN apk add --update python py-pip
-COPY requirements.txt /src/requirements.txt
-RUN pip install -r /src/requirements.txt
-COPY app.py /src
-COPY buzz /src/buzz
-CMD python /src/app.py
+# syntax=docker/dockerfile:1
+
+FROM python:3.6.9
+
+WORKDIR /generator
+
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+
+COPY . .
+
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
